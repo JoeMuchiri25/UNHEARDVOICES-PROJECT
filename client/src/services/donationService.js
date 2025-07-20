@@ -2,7 +2,7 @@
 import API from './api';
 
 // Submit donation (used in Donate.jsx)
-export const submitDonation = (data) => API.post('/donations', data);
+export const submitDonation = (data) => API.post('/api/donations', data);
 
 // Fetch donations linked to a story
-export const getDonationsByStory = (storyId) => API.get(`/donations/${storyId}`);
+export const getDonationsByStory = (storyId) => API.get(`/api/donations/${storyId}`);
