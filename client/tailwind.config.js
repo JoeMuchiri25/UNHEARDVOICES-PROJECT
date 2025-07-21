@@ -1,5 +1,5 @@
-// tailwind.config.js
 export default {
+  darkMode: 'class', // ✅ This is essential for theme switching
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
