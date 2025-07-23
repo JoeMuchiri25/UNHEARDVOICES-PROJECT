@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use(logger);
-
+app.options('*', cors()); // Handles preflight requests
 // Serve static assets
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
