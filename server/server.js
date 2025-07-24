@@ -18,6 +18,7 @@ connectDB();
 
 // Initialize Express
 const app = express();
+
 const allowedOrigins = [
   'https://unheardvoices-project.vercel.app', // your Vercel frontend
 ];
@@ -27,12 +28,11 @@ app.use(cors({
   credentials: true,
 }));
 
+
 // --- Middleware ---
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
-
-
 
 // Logging (only in development)
 if (process.env.NODE_ENV === 'development') {
@@ -57,7 +57,6 @@ app.use(errorHandler);
 
 // Triggering CI pipeline test
 // Triggering test run after package.json update
-
 
 // --- Server Start ---
 const PORT = process.env.PORT || 8000;
